@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="application/json">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.1.8/jsoneditor.min.css" /> -->
-    
-    <title>JSON Path Finder</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    
-    
-</head>
-<body>
-    
-
+{% extends 'base.html' %}
+  
+    {% block body %}
     <div class="container">
         
     <!-- <button id="validateBtn">Validate JSON</button> -->
@@ -38,8 +24,40 @@
         
     </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.1.8/jsoneditor.min.js"></script> -->
-   
-    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
-</body>
-</html>
+    <div class="rectangle">
+        <P>This is JSON path finder, helps you to find out all possible paths for a given keyword present in the JSON.</P>
+        <br> 1. Paste your json.</br>
+        <br> 2. Paste you keyword.</br> 
+        <br> 3. Click on search button, and</br>
+        <p>
+        Boom! It will give all path </p>
+
+    </div>
+    <br><p></p>
+    <div class="rectangle">
+        <h3>About me</h3>
+        Hi!, I am Dev, I have hands on experience in DevOps to develop CI/CD pipeline and to maintain availablity of site and 
+        <br> Currently I am working for SHL, India. It's been one and half year here</br>
+        <br> I have implemeted and managed alerting system at SHL</br> 
+        <br> Implemeted CI/CD pipeline</br>
+        <p>  Have built docker images </p>
+
+    </div>
+    <div class="container columns">
+        <div class="column">
+            <h3>Contacts</h3>
+            <p>Email: devg04@gmail.com</p>
+            <p>Phone: 72******80</p>
+        </div>
+        <div class="column">
+            <h3>My Work</h3>
+            <div class="social-icons" onclick="window.open('https://github.com/dev4divine/pathfinder/tree/jsonpath', '_blank')">
+                <i class="fab fa-github"></i><p>Twitter: @jsonpathfinder</p>
+            </div>
+            <div class="social-icons" onclick="window.open('https://www.linkedin.com/in/devkumar247', '_blank')">
+                <i class="fab fa-linkedin"></i><p>LinkedIn: linkedin.com/in/devkumar247</p>
+            </div>
+            
+        </div>
+     </div> 
+{% endblock %}

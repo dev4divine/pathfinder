@@ -1,0 +1,5 @@
+sudo install python3 -y
+pip3 install Flask==3.0.3 
+pip3 install Werkzeug==3.0.3
+pip3 install Flask-Mail
+https://www.tooplate.com/zip-templates/2120_ben_resume.zip

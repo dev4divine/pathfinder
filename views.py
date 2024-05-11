@@ -73,3 +73,8 @@ def index():
             print("Error decoding JSON:", e)
             #return jsonify({'status': 'error', 'message': f'JSON is not valid: {str(e)}'})
             return render_template("index.html",msg="JSON is not valid")
+    return render_template('index.html')    
+
+@views.route('/personal')
+def personal():
+    return render_template('index1.html')
