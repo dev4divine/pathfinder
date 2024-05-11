@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#jsoneditor {
+    height: 500px;
+    margin-bottom: 20px;
+}
+#validationResult {
+    color: green;
+    font-weight: bold;
+}
+.error {
+    color: red;
+}
+#jsonData {
+    height: 300px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="application/json">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.1.8/jsoneditor.min.css" /> -->
+    
+    <title>JSON Path Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    
+</head>
+<body>
+    
+
+    <div class="container">
+        
+    <!-- <button id="validateBtn">Validate JSON</button> -->
+        <h1>JSON Path Finder</h1>
+        <form id="jsonForm" method="post" action="{{ url_for('views.index')}}">
+            <label for="jsonData">Enter JSON Data:</label>
+            <textarea id="jsonData" name="jsonData" rows="10" cols="50" ></textarea>
+            <label for="key">Enter Key to Find:</label>
+            <input type="text" id="key" name="key">
+            <button type="submit">Search</button>
+            {{msg}}
+            <br>{{keymsg}}
+        </form>
+    </div>
+    <div class="container">
+        <p>
+            {% autoescape false %}
+            {{ paths }}</p>
+            {% endautoescape %}
+        <br>
+        
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.1.8/jsoneditor.min.js"></script> -->
+   
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+</html>
